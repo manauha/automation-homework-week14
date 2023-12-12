@@ -7,12 +7,13 @@ import com.nopcommerce.demo.pages.DesktopsPage;
 import com.nopcommerce.demo.pages.HomePage;
 import com.nopcommerce.demo.testbase.BaseTest;
 import org.testng.Assert;
+import org.testng.ITestNGListener;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import resources.testdata.TestData;
 
-@Listeners(CustomListeners.class)
+@Listeners({ITestNGListener.class, CustomListeners.class})
 public class ComputerPageTest extends BaseTest {
 
     HomePage homePage;

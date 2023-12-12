@@ -4,11 +4,12 @@ import com.tutorialsninja.demo.customlisteners.CustomListeners;
 import com.tutorialsninja.demo.pages.*;
 import com.tutorialsninja.demo.testbase.BaseTest;
 import org.testng.Assert;
+import org.testng.ITestNGListener;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(CustomListeners.class)
+@Listeners({ITestNGListener.class, CustomListeners.class})
 public class LaptopsAndNotebooksTest extends BaseTest {
 
     HomePage homePage;

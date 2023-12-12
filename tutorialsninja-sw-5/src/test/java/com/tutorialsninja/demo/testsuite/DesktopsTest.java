@@ -7,12 +7,13 @@ import com.tutorialsninja.demo.pages.ProductPage;
 import com.tutorialsninja.demo.pages.ShoppingCartPage;
 import com.tutorialsninja.demo.testbase.BaseTest;
 import org.testng.Assert;
+import org.testng.ITestNGListener;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import resources.testdata.TestData;
 
-@Listeners(CustomListeners.class)
+@Listeners({ITestNGListener.class, CustomListeners.class})
 public class DesktopsTest extends BaseTest {
 
     HomePage homePage;

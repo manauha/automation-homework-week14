@@ -11,8 +11,6 @@ import org.testng.ITestResult;
 
 import static com.nopcommerce.demo.utility.Utility.takeScreenShot;
 
-
-
 public class CustomListeners implements ITestListener {
 
     public ExtentSparkReporter reporter;

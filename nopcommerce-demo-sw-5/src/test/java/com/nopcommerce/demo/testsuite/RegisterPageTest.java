@@ -5,11 +5,12 @@ import com.nopcommerce.demo.pages.HomePage;
 import com.nopcommerce.demo.pages.RegisterPage;
 import com.nopcommerce.demo.testbase.BaseTest;
 import org.testng.Assert;
+import org.testng.ITestNGListener;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(CustomListeners.class)
+@Listeners({ITestNGListener.class, CustomListeners.class})
 public class RegisterPageTest extends BaseTest {
 
     HomePage homePage;
